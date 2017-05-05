@@ -1,0 +1,8 @@
+*/Build
+*/Pods
+Podfile.lock
+xcuserdata
+*.xcuserstate
+*.pbxuser
+*.ipa
+.DS_Store
