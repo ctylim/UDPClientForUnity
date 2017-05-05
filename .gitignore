@@ -1,8 +1,33 @@
-*/Build
-*/Pods
+# XCode
+
+UDPSender/Build
+UDPSender/Pods
 Podfile.lock
 xcuserdata
 *.xcuserstate
 *.pbxuser
 *.ipa
 .DS_Store
+
+# Unity
+
+UDPReceiver/[Ll]ibrary
+UDPReceiver/[Tt]emp
+UDPReceiver/[Oo]bj/
+UDPReceiver/[Bb]uild/
+UDPReceiver/[Bb]uilds/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pidb.meta
+
+# Others
+
+.idea
