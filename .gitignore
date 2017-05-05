@@ -28,6 +28,9 @@ UDPReceiver/[Bb]uilds/
 *.svd
 *.pidb.meta
 
+**/UniRx
+**/UniRx.meta
+
 # Others
 
 .idea
