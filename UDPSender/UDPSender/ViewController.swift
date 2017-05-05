@@ -25,7 +25,31 @@ class ViewController: NSViewController {
     }
 
     @IBAction func sendButtonClicked(_ sender: Any) {
-        udpSender.send(message: "send message\n")
+        startStreaming()
+    }
+    
+    var timer: DispatchSourceTimer?
+    var count: Int32 = 0
+    
+    func startStreaming() {
+        let queue = DispatchQueue(label: "timer")
+        timer = DispatchSource.makeTimerSource(queue: queue)
+        timer?.scheduleRepeating(deadline: .now(), interval: .milliseconds(1000))
+        timer?.setEventHandler(handler: {
+            self.sendMessage()
+        })
+        timer?.resume()
+    }
+    
+    func sendMessage() {
+        print("send " + String(count))
+        udpSender.send(message: "send " + String(count))
+        count += 1
+    }
+    
+    func stopStreaming() {
+        timer?.cancel()
+        timer = nil
     }
 
 }
